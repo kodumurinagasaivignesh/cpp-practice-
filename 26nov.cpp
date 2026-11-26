@@ -118,34 +118,64 @@
 
 
 
-#include<iostream>
-using namespace std;
-class data;
-{float marks;
-public:
-	void in()
-	{cout<<"enter the marks";
-	cin>>marks;
-	try
-	{if(marks>=40)
-	cout<<"you are pass";
-	else
-	throw marks;
-	}
-	catch(float)
-	{
-		cout<<"you must give the exam again";
-	}
-	catch()
-	{
-		cout<<"an error occurred";  
-	}
+// #include<iostream>
+// using namespace std;
+// class data;
+// {float marks;
+// public:
+// 	void in()
+// 	{cout<<"enter the marks";
+// 	cin>>marks;
+// 	try
+// 	{if(marks>=40)
+// 	cout<<"you are pass";
+// 	else
+// 	throw marks;
+// 	}
+// 	catch(float)
+// 	{
+// 		cout<<"you must give the exam again";
+// 	}
+// 	catch()
+// 	{
+// 		cout<<"an error occurred";  
+// 	}
 	
-};
-int main()
-{
-	class data dd;
-	dd.in();
-	class data dd2;
-	dd2.in();
+// };
+// int main()
+// {
+// 	class data dd;
+// 	dd.in();
+// 	class data dd2;
+// 	dd2.in();
+// }
+
+
+//prime number 
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Enter a number: ";
+    cin >> n;
+
+    try {
+        if (n <= 1) {
+            throw n ;
+        }
+
+        for (int i = 2; i * i <= n; i++) {
+            if (n % i == 0) {
+                cout << n << " is not prime." << endl;
+                return 0;
+            }
+        }
+        cout << n << " is prime." << endl;
+    } 
+    catch (int) {
+        cout << "invalid input " << endl; 
+    }
+
+    return 0;
 }
